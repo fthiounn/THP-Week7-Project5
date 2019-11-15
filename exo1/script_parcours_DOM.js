@@ -6,7 +6,7 @@ $(document).ready(function() {
   console.log("Content of the div with id 'coucou' : "+document.getElementById("coucou").textContent);
 
   //Quelle est l'URL vers laquelle pointe le 3ème élément <a> de la page HTML ? Imprime-la dans la console.
-  console.log("The third <a> element of the page link is: "+document.getElementsByTagName('p'));
+  console.log("The third <a> element of the page link is: "+ document.getElementsByTagName('a')[2]);
 
   //Combien d'éléments portent la classe compte-moi ? Imprime le résultat dans la console.
   console.log("There are " + document.getElementsByClassName("compte-moi").length + " elements with class 'compte-moi'");

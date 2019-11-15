@@ -45,12 +45,21 @@ function changeCardsText(){
 
 //modif 7
 function changeViewButtons(){
-  console.logs(document.getElementsByClassName("btn-group"));
   let buttons = document.getElementsByClassName("btn-group");
   for(let i = 0; i < 6;i++){
-    buttons.getElementsByTagName("button")[0].class = "btn btn-sm ntm-succes";
+    buttons[i].getElementsByTagName("button")[0].classList.remove('btn-outline-secondary');
+    buttons[i].getElementsByTagName("button")[0].classList.add('btn-success');
   }
 }
+
+//modif 8
+
+var node = document.createElement("div");
+node.className = "row";
+document.getElementsByClassName("album py-5 bg-light")[0].getElementsByTagName("div")[0].appendChild(node);
+document.getElementsByClassName("row")[1].appendChild(  document.getElementsByClassName("row")[0].getElementsByTagName("div")[2] )
+
+
 //calls
 changeTitles();
 changeCallToActions();
@@ -59,3 +68,14 @@ populateImages();
 deleteLastCards();
 changeCardsText();
 changeViewButtons();
+
+
+
+
+
+
+
+
+
+
+
